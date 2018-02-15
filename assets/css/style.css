@@ -1,32 +1,112 @@
-ul{
-  background-color: grey;
-  margin:0px;
-  padding:0px;
+body{
+  font-family: 'bellotaregular';
+  /* font-size: 24px; */
 }
-/* ul:hover{
-  display: block;
-  position:relative;
-} */
+hr{
+  color: #15c5bd;
+}
+.section--hackers{
+  grid-template-columns:1fr;
+  grid-template-rows: 100px 1fr 100px;
+  min-width: 300px;
+  max-width: 1000px;
+  padding: 25px;
+  margin: auto;
 
-.nav--sujets > ul{
-  display: none;
-  position: absolute;
+  /* background-color: #15c5bd; */
+  border: 5px solid #15c5bd;
+  border-radius: 25px;
+  box-shadow: 5px 5px 5px #303030;
 }
-.nav--sujets > ul > li{
-  /* position: relative; */
-  /* display: inline-block; */
-  /* vertical-align: top; */
-  /* text-align: center; */
+
+.section-header--hackers{
+  grid-column: 1;
+  grid-row: 1;
+  color: #15c5bd;
+  text-shadow: 2px 2px 2px #303030;
+  text-align: center;
+
 }
-.nav--sujets > a{
-  text-decoration: none;
+.section-main--hackers{
+  grid-column: 1;
+  grid-row: 2;
+
 }
-.nav--sujets > a:hover{
-  background-color: lightgrey;
+
+.logo--hackers{
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  /* width:25vw; */
+  /* height:500px; */
+  /* max-height: 25%; */
+
+  margin:auto;
+
+  /* background-color: red; */
 }
-.nav--sujets > a:hover ~ ul{
-  display:block;
+.form--hackers{
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: auto auto auto;
+  /* grid-template-rows: minmax(auto, 300px) auto auto; */
+  /* grid-template-rows: 1fr 1fr 100px; */
+
+  /* background-color: blue; */
 }
-.nav--sujets > ul:hover{
-  display:block;
+.fieldset--round{
+  border-radius: 5px;
+  padding: 25px;
+  border: 5px solid #15c5bd;
+
+  /* background-color: #15c5bd; */
+}
+.fieldset--round > legend{
+  font-weight: bold;
+}
+.form-fieldset--info{
+  grid-column: 1;
+  grid-row: 1;
+
+  /* background-color: pink; */
+}
+.form-fieldset--message{
+  padding: 25px;
+  grid-column: 1;
+  grid-row: 2;
+
+  /* background-color: orange; */
+}
+
+.fieldset--message--area{
+  width:100%;
+  height: 100%;
+
+  margin-bottom: 25px;
+  resize: none;
+}
+.btn--envoyer{
+  grid-column: 1;
+  grid-row: 3;
+
+  border-radius: 5px;
+
+  background-color: #15c5bd;
+
+  font-family: 'bellotaregular';
+  font-weight: bold;
+}
+.section-footer--hackers{
+  grid-column: 1;
+  grid-row: 3;
+
+  /* background-color: yellow; */
+}
+.span--copyright{
+  float: right;
+}
+.lbl--block{
+  display: block;
+}
+.lbl--alert{
+  color:red;
 }
