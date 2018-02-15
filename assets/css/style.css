@@ -1,0 +1,32 @@
+ul{
+  background-color: grey;
+  margin:0px;
+  padding:0px;
+}
+/* ul:hover{
+  display: block;
+  position:relative;
+} */
+
+.nav--sujets > ul{
+  display: none;
+  position: absolute;
+}
+.nav--sujets > ul > li{
+  /* position: relative; */
+  /* display: inline-block; */
+  /* vertical-align: top; */
+  /* text-align: center; */
+}
+.nav--sujets > a{
+  text-decoration: none;
+}
+.nav--sujets > a:hover{
+  background-color: lightgrey;
+}
+.nav--sujets > a:hover ~ ul{
+  display:block;
+}
+.nav--sujets > ul:hover{
+  display:block;
+}
