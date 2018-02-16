@@ -5,7 +5,7 @@
     if(!isset($pays) || empty($pays))
       $pays="Belgique";
     return '
-      <select name="pays">
+      <select class="pays--hackers" name="pays">
         <option value="'.$pays .'" selected="selected">'.$pays.' </option>
 
         <option value="Afghanistan">Afghanistan </option>
