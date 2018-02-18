@@ -9,7 +9,7 @@
   background-color: #FFF;
   border-radius: 15%;
 
-  color:#15c5bd;
+  /* color:#15c5bd; */
 }
 .nav--sujets > ul{
   display: none;
@@ -19,11 +19,11 @@
   margin:0px;
   padding:0px;
   border:1px solid #303030;
-  box-shadow: 3px 3px 5px #15c5bd;
+  box-shadow: 3px 3px 5px #303030;
 
   background-color: #FFF;
 
-  color:#15c5bd;
+  /* color:#15c5bd; */
 }
 .nav--sujets > ul > li{
   padding:10px;

@@ -1,5 +1,11 @@
-body{
-  font-family: 'bellotaregular';
+.section--hackers input{
+  font-family: 'bellotabold';
+}
+.section--hackers textarea{
+  font-family: 'bellotabold';
+}
+.section--hackers select{
+  font-family: 'bellotabold';
 }
 .section--hackers hr{
   color: #15c5bd;
@@ -8,11 +14,9 @@ body{
   color: #15c5bd;
   text-shadow: 2px 2px 2px #303030;
 }
-/* section : cadre de grille globale */
-.section--hackers{
-  grid-template-columns:1fr;
-  grid-template-rows: 100px 1fr 100px;
 
+
+.section--hackers{
   min-width: 500px;
   max-width: 1000px;
   padding: 25px;
@@ -21,26 +25,22 @@ body{
   border: 5px solid #15c5bd;
   border-radius: 25px;
   box-shadow: 5px 5px 5px #303030;
+
+  font-family: 'bellotabold';
 }
 .section-header--hackers{
-  grid-column: 1;
-  grid-row: 1;
-
   text-align: center;
 }
 .section-main--hackers{
-  grid-column: 1;
-  grid-row: 2;
-  /*grille de contenu*/
+  /*grille de Main*/
   display: grid;
   grid-template-columns: 75% 25%;
   grid-template-rows: 1fr;
 }
 .section-footer--hackers{
-  grid-column: 1;
-  grid-row: 3;
+  text-align: center;
 }
-/*section-main : cadre de grille du contenu*/
+/*section-main--hackers : éléments de grille de Main*/
 .logo--hackers{
   grid-column: 2;
   grid-row: 1;
@@ -51,6 +51,7 @@ body{
   grid-column: 1;
   grid-row: 1;
 }
+
 /*mise en forme des différents éléments*/
 .fieldset--round{
   border-radius: 5px;
@@ -77,8 +78,17 @@ body{
 
   background-color: #15c5bd;
 
-  font-family: 'bellotaregular';
   font-weight: bold;
+}
+.footer-lbl{
+  float: left;
+}
+.Raspberry-Pi-Logo{
+  height: 50px;
+}
+.Becode-Logo{
+  float: right;
+  height: 50px;
 }
 .span--copyright{
   float: right;
@@ -88,4 +98,7 @@ body{
 }
 .lbl--alert{
   color:red;
+}
+.address{
+  display:none;
 }
