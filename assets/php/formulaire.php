@@ -1,6 +1,5 @@
 <?php
 
-session_start();
 /*Sanitisation*/
 $options = array(
   'civil'     => FILTER_SANITIZE_STRING
@@ -137,6 +136,16 @@ if ($result != null && $result != FALSE && $_SERVER['REQUEST_METHOD']=='POST')
   function vider_session()
   {
     session_unset();
+    //initialisation des variables.
+    $_SESSION["civil"] = "";
+    $_SESSION["nom"] = "";
+    $_SESSION["email"] = "";
+    $_SESSION["pays"] = "Belgique";
+    $_SESSION["msg_area"] = "";
+    $_SESSION["sav"] = "";
+    $_SESSION["livraison"] = "";
+    $_SESSION["autre"] = "";
+    $_SESSION["copie"] = "";
     //initialisation des messages d'erreur.
     $_SESSION["message"]["nom"] = "*";
     $_SESSION["message"]["email"] = "*";
