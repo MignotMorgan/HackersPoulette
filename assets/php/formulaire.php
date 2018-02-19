@@ -13,16 +13,16 @@ $options = array(
 );
 $result = filter_input_array(INPUT_POST, $options);
 
-//récupération des variable POST dans la SESSION
-$_SESSION["civil"] = htmlentities($_POST["civil"]);
-$_SESSION["nom"] = htmlentities($_POST["nom"]);
-$_SESSION["email"] = htmlentities($_POST["email"]);
-$_SESSION["pays"] = htmlentities($_POST["pays"]);
-$_SESSION["msg_area"] = htmlentities($_POST["msg_area"]);
-$_SESSION["sav"] = htmlentities($_POST["sav"]);
-$_SESSION["livraison"] = htmlentities($_POST["livraison"]);
-$_SESSION["autre"] = htmlentities($_POST["autre"]);
-$_SESSION["copie"] = htmlentities($_POST["copie"]);
+//Initialisation de la SESSION
+$_SESSION["civil"] = "";
+$_SESSION["nom"] = "";
+$_SESSION["email"] = "";
+$_SESSION["pays"] = "Belgique";
+$_SESSION["msg_area"] = "";
+$_SESSION["sav"] = "";
+$_SESSION["livraison"] = "";
+$_SESSION["autre"] = "";
+$_SESSION["copie"] = "";
 //initialisation des messages d'erreur.
 $_SESSION["message"]["nom"] = "*";
 $_SESSION["message"]["email"] = "*";
@@ -35,6 +35,17 @@ $_SESSION["valid"]["message"]="";
 if ($result != null && $result != FALSE && $_SERVER['REQUEST_METHOD']=='POST')
 {
   $valid = true;
+
+  //récupération des variable POST dans la SESSION
+  $_SESSION["civil"] = htmlentities($_POST["civil"]);
+  $_SESSION["nom"] = htmlentities($_POST["nom"]);
+  $_SESSION["email"] = htmlentities($_POST["email"]);
+  $_SESSION["pays"] = htmlentities($_POST["pays"]);
+  $_SESSION["msg_area"] = htmlentities($_POST["msg_area"]);
+  $_SESSION["sav"] = htmlentities($_POST["sav"]);
+  $_SESSION["livraison"] = htmlentities($_POST["livraison"]);
+  $_SESSION["autre"] = htmlentities($_POST["autre"]);
+  $_SESSION["copie"] = htmlentities($_POST["copie"]);
 
   //vérification de l'input caché.(ce champ doit être vide.)
   if(!empty($_POST["address"]))
